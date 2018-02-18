@@ -7,7 +7,7 @@ Clojure(Script) library for snapshot testing
 
 [source,clojure]
 ----
-{:deps {moviola {:git/url "https://github.com/juxt/moviola" :sha "..."}}}
+{:deps {juxt/moviola {:git/url "https://github.com/juxt/moviola" :sha "..."}}}
 ----
 
 [source,clojure]
