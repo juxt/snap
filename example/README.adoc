@@ -1,0 +1,12 @@
+= Snapshot testing example
+
+Play around by changing the test values and/or deleting the files stored under `/test/snapshots`
+
+== Clojure test runner
+
+`clj -Atest`
+
+== ClojureScript test runner
+
+`npm i`
+`clj build.clj test`

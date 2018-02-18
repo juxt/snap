@@ -1,0 +1,46 @@
+= Moviola
+:toc:
+
+Clojure(Script) library for snapshot testing
+
+== Usage
+
+[source,clojure]
+----
+{:deps {moviola {:git/url "https://github.com/juxt/moviola" :sha "..."}}}
+----
+
+[source,clojure]
+----
+(deftest react-test
+  (moviola.core/match-snapshot ::Root (js->clj (RootComponent.toJSON))))
+----
+
+The first time the test is run it creates a snapshot of the test value.
+After a snapshot is created every successive run compares the supplied value against the snapshot.
+If a test failure is found you can either:
+
+- Fix the code that created the unintended change
+- Ensure this is an intended change, delete the old snapshot and let `moviola` create a new one
+
+**Make sure you commit the snapshots to source code!**
+
+== What is snapshot testing
+____
+Snapshot tests are a very useful tool whenever you want to make sure your UI does not change unexpectedly.
+
+A typical snapshot test case for a mobile app renders a UI component, takes a screenshot, then compares it to a reference image stored alongside the test. The test will fail if the two images do not match: either the change is unexpected, or the screenshot needs to be updated to the new version of the UI component.
+____
+
+This library is inspired by Jest snapshot https://facebook.github.io/jest/docs/en/snapshot-testing.html[testing]
+The idea seems so good to me that it can be applied to other cases beyond UI tests.
+
+== Examples
+
+Check the `/example` directory for a React tree test and a Datomic query test
+
+== Checklist
+
+* [*] ClojureScript support
+* [ ] Add configurable options (snapshot path, pprint)
+* [ ] Add Datascript example

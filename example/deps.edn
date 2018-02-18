@@ -1,0 +1,12 @@
+{:deps
+  {moviola {:local/root ".."}
+   datascript {:mvn/version "0.16.3"}}
+ :aliases
+ {:test
+  {:extra-paths ["test"]
+   :extra-deps
+   {com.cognitect/test-runner
+    {:git/url "https://github.com/cognitect-labs/test-runner"
+     :sha     "5fb4fc46ad0bf2e0ce45eba5b9117a2e89166479"}}
+   :main-opts   ["-m" "cognitect.test-runner"]}}
+}

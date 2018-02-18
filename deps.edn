@@ -1,0 +1,4 @@
+{:deps
+  {org.clojure/clojure {:mvn/version "1.9.0"}
+   org.clojure/clojurescript {:mvn/version "1.9.946"}
+   cljs-node-io {:mvn/version "0.5.0"}}}

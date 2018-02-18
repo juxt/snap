@@ -1,0 +1,6 @@
+{"type" "ul",
+ "props" {},
+ "children"
+ [{"type" "li", "props" {}, "children" ["One"]}
+  {"type" "li", "props" {}, "children" ["Two"]}
+  {"type" "li", "props" {}, "children" ["Three"]}]}
