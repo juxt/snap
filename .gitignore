@@ -1,3 +1,4 @@
 target
 node_modules
-.cpccache
+.cpcache
+project.clj

@@ -2,6 +2,8 @@
 
 Play around by changing the test values and/or deleting the files stored under `/test/snapshots`
 
+You probably want to add something like https://github.com/pjstadig/humane-test-output to help you with the diffs.
+
 == Clojure test runner
 
 `clj -Atest`

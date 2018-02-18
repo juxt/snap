@@ -41,6 +41,6 @@ Check the `/example` directory for a React tree test and a Datomic query test
 
 == Checklist
 
-* [*] ClojureScript support
+* [x] ClojureScript support
+* [x] Add Datascript example
 * [ ] Add configurable options (snapshot path, pprint)
-* [ ] Add Datascript example
