@@ -1,4 +1,4 @@
-(ns example.datalog
+(ns example.datalog-test
   (:require [clojure.test :refer :all]
             [moviola.core :as m]
             [datascript.core :as d]))

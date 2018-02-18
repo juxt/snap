@@ -39,8 +39,8 @@ The idea seems so good to me that it can be applied to other cases beyond UI tes
 
 Check the `/example` directory for a React tree test and a Datomic query test
 
-== Checklist
+== Todo
 
 * [x] ClojureScript support
 * [x] Add Datascript example
-* [ ] Add configurable options (snapshot path, pprint)
+* [x] Add configurable options (snapshot path, pprint)
