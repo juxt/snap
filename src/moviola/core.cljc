@@ -14,8 +14,8 @@
 
 (defn match-snapshot
   "Accepts a unique namespaced keyword and a value.
-   Creates a file using the keyword if not present and stores the value.
-   If a file with that name is already present it compares its content to the value using a test/is macro"
+   Creates a file (using the keyword for its name) if not already present, and writes the value to it.
+   If a file with that name is already present it compares its content to the value using a test/is macro."
   ([k v] (match-snapshot {} k v))
   ([{:keys [make-path pprint?] :or {make-path default-make-path pprint? true} :as opts} k v]
    (let [file-name (make-path k)
