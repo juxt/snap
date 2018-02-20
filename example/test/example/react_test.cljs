@@ -1,6 +1,6 @@
 (ns example.react-test
   (:require [cljs.test :refer [deftest is]]
-            [moviola.core :as m]))
+            [snap.core :as s]))
 
 (def Renderer (js/require "react-test-renderer"))
 (def React (js/require "react"))
@@ -14,4 +14,4 @@
 (def rendered (Renderer.create component))
 
 (deftest react-test
-  (m/match-snapshot ::tree (js->clj (rendered.toJSON))))
+  (s/match-snapshot ::tree (js->clj (rendered.toJSON))))

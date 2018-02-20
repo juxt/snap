@@ -1,4 +1,4 @@
-= Moviola
+= snap
 :toc:
 
 Clojure(Script) library for snapshot testing
@@ -7,13 +7,13 @@ Clojure(Script) library for snapshot testing
 
 [source,clojure]
 ----
-{:deps {juxt/moviola {:git/url "https://github.com/juxt/moviola" :sha "..."}}}
+{:deps {juxt/snap {:git/url "https://github.com/juxt/snap" :sha "..."}}}
 ----
 
 [source,clojure]
 ----
 (deftest react-test
-  (moviola.core/match-snapshot ::Root (js->clj (RootComponent.toJSON))))
+  (snap.core/match-snapshot ::Root (js->clj (RootComponent.toJSON))))
 ----
 
 The first time the test is run it creates a snapshot of the test value.
@@ -21,7 +21,7 @@ After a snapshot is created every successive run compares the supplied value aga
 If a test failure is found you can either:
 
 - Fix the code that created the unintended change
-- Ensure this is an intended change, delete the old snapshot and let `moviola` create a new one
+- Ensure this is an intended change, delete the old snapshot and let `snap` create a new one
 
 **Make sure you commit the snapshots to source code!**
 

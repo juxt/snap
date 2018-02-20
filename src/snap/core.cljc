@@ -1,4 +1,4 @@
-(ns moviola.core
+(ns snap.core
   #?@(:clj [(:require [clojure.java.io :as io]
                       [clojure.edn :as edn]
                       [clojure.test :as t]
@@ -22,7 +22,7 @@
          file (io/file file-name)]
      (if (.exists file)
        (let [snapshot (edn/read-string (slurp file))]
-         (t/is (= snapshot v) k))
+         (t/is (= snapshot v) (str "Using snapshot at " file-name)))
        (do
          (io/make-parents file-name)
          (spit file-name (if pprint? (with-out-str (p/pprint v)) v)))))))

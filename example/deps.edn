@@ -1,5 +1,5 @@
 {:deps
-  {moviola {:local/root ".."}
+  {snap {:local/root ".."}
    datascript {:mvn/version "0.16.3"}}
  :aliases
  {:test

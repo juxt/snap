@@ -1,7 +1,7 @@
 (ns example.simple-test
   (:require [clojure.test :refer :all]
-            [moviola.core :as m]))
+            [snap.core :as s]))
 
 (deftest simple-test
-  (m/match-snapshot ::range (range 10))
-  (m/match-snapshot ::zipmap (zipmap "moviola" (range))))
+  (s/match-snapshot ::range (range 10))
+  (s/match-snapshot ::zipmap (zipmap "snap" (range))))

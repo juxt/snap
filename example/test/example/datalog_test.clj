@@ -1,6 +1,6 @@
 (ns example.datalog-test
   (:require [clojure.test :refer :all]
-            [moviola.core :as m]
+            [snap.core :as s]
             [datascript.core :as d]))
 
 (defn seed-data [conn]
@@ -11,4 +11,4 @@
 (deftest datalog-test
   (let [conn (d/create-conn)]
     (seed-data conn)
-    (m/match-snapshot ::datalog (d/q '[:find  ?n ?a :where [?e :name ?n] [?e :age ?a]] @conn))))
+    (s/match-snapshot ::datalog (d/q '[:find  ?n ?a :where [?e :name ?n] [?e :age ?a]] @conn))))
